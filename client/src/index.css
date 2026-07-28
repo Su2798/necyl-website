@@ -1,12 +1,35 @@
 @import "tailwindcss";
 
 @theme {
---color-dark-blue: #1e3a8a;
---color-light-blue: #e0f2fe;
---color-orange-theme: #f97316;
+  --color-dark-blue: #1e3a8a;
+  --color-light-blue: #e0f2fe;
+  --color-orange-theme: #f97316;
 }
 
 body {
-/* This applies our elegant, bilingual serif font globally */
-font-family: 'Noto Serif Myanmar', serif;
+  font-family: "Noto Serif Myanmar", serif;
+  /* Increased line height for global readability */
+  line-height: 1.8;
+}
+
+/* Specifically increase spacing for Headings to prevent vowel collisions */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4 !important;
+  padding-bottom: 0.5rem;
+}
+
+/* Specific fix for text blocks that might still be cramped */
+p,
+li,
+button {
+  line-height: 1.8 !important;
+}
+
+/* If the FAQ text specifically is still clipping, this targets it */
+.faq-answer-text {
+  line-height: 2 !important;
+  padding-top: 0.5rem;
 }
