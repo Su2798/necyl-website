@@ -2,22 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import logo from "../assets/logo.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  // Simple translation helper to ensure it works without external dependencies
-  const t = (key) => {
-    const translations = {
-      "home.heroSubtitle":
-        "Empowering students through excellent English education.",
-      "nav.home": "Home",
-      "nav.about": "About Us",
-      "nav.programmes": "Programmes",
-      "nav.faq": "FAQ",
-      "nav.contact": "Contact",
-      "footer.copyright": "© 2026 NECYL English School. All rights reserved.",
-    };
-    return translations[key] || key;
-  };
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-blue-950 text-blue-100 pt-20 pb-8">
