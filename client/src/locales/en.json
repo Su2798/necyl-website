@@ -1,0 +1,120 @@
+{
+"nav": {
+"home": "Home",
+"about": "About Us",
+"programmes": "Programmes",
+"gallery": "Gallery",
+"faq": "FAQ",
+"contact": "Contact",
+"viber": "Viber"
+},
+"home": {
+"heroTitle": "Welcome to NECYL English School",
+"heroSubtitle": "Empowering students through excellent English education.",
+"heroCta": "Explore Programmes",
+"stats": {
+"experience": "10+ Years Experience",
+"students": "5000+ Students",
+"classes": "200+ Classes"
+},
+"aboutPreview": "NECYL English School is dedicated to providing high-quality language education to students of all ages. Our experienced teachers and proven curriculum ensure your success.",
+"readMore": "Read More",
+"programmesTitle": "Our Popular Programmes",
+"testimonialsTitle": "What Parents & Students Say",
+"partnersTitle": "Our Trusted Partners",
+"galleryTitle": "Life at NECYL",
+"faqPreviewTitle": "Have Questions?",
+"faqPreviewText": "Find answers about enrollment, placement tests, and our teaching methods.",
+"testimonials": [
+{
+"text": "NECYL has transformed my child's confidence in speaking English. The teachers are amazing and so supportive!",
+"author": "Daw Hla Hla",
+"role": "Parent"
+},
+{
+"text": "The curriculum is perfectly structured. I highly recommend it to anyone wanting to improve their language skills.",
+"author": "U Aung Tun",
+"role": "Adult Student"
+}
+]
+},
+"about": {
+"title": "About Us",
+"missionTitle": "Our Mission",
+"missionText": "To provide accessible, high-quality English language education that empowers students to achieve their academic and professional goals.",
+"visionTitle": "Our Vision",
+"visionText": "To be the leading English language school in Myanmar, recognized for our innovative teaching methods and student success.",
+"founderTitle": "Meet the Founder",
+"founderMessage": "Welcome to NECYL. We believe that language is a bridge to endless opportunities. Our goal is to equip our students with the skills they need to confidently navigate the global landscape."
+},
+"programmes": {
+"title": "Our Programmes",
+"duration": "Duration",
+"level": "Level",
+"enquire": "Enquire Now",
+"list": [
+{
+"id": 1,
+"title": "Young Learners English",
+"desc": "Fun and interactive classes designed for children aged 6-12 to build a strong foundation in English.",
+"level": "Beginner",
+"duration": "6 Months"
+},
+{
+"id": 2,
+"title": "General English for Teens",
+"desc": "Comprehensive courses focusing on grammar, vocabulary, speaking, and listening skills for teenagers.",
+"level": "Intermediate",
+"duration": "4 Months"
+},
+{
+"id": 3,
+"title": "Adult Communicative English",
+"desc": "Practical English for daily communication, travel, and workplace environments.",
+"level": "All Levels",
+"duration": "8 Weeks"
+}
+]
+},
+"gallery": {
+"title": "Gallery"
+},
+"faq": {
+"title": "Frequently Asked Questions",
+"list": [
+{
+"q": "How do I enroll in a course?",
+"a": "You can enroll by filling out the contact form on our website or by visiting our campus in person."
+},
+{
+"q": "Do you offer placement tests?",
+"a": "Yes, we provide free placement tests to ensure you are enrolled in the correct level."
+},
+{
+"q": "Are the teachers native speakers?",
+"a": "We have a mix of highly qualified local and native English-speaking teachers."
+}
+]
+},
+"contact": {
+"title": "Contact Us",
+"form": {
+"name": "Full Name",
+"email": "Email Address",
+"phone": "Phone Number",
+"age": "Age",
+"message": "Your Message",
+"submit": "Send Enquiry",
+"success": "Thank you! Your enquiry has been sent successfully.",
+"error": "Please fill in all required fields correctly."
+},
+"info": {
+"address": "123 Education Street, Yangon, Myanmar",
+"email": "info@necyl.com",
+"phone": "+95 9 123 456 789"
+}
+},
+"footer": {
+"copyright": "© 2026 NECYL English School. All rights reserved."
+}
+}

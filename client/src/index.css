@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+--color-dark-blue: #1e3a8a;
+--color-light-blue: #e0f2fe;
+--color-orange-theme: #f97316;
+}
+
+body {
+/* This applies our elegant, bilingual serif font globally */
+font-family: 'Noto Serif Myanmar', serif;
+}
