@@ -55,7 +55,7 @@ const Header = () => {
 
         {/* Actions */}
         {/* Language Switcher */}
-        <div className="flex bg-gray-100 rounded-lg p-1 border border-gray-200">
+        <div className="hidden md:flex bg-gray-100 rounded-lg p-1 border border-gray-200">
           <button
             onClick={() => i18n.changeLanguage("en")}
             className={`w-12 h-8 flex items-center justify-center pt-[10px] rounded-md text-xs font-bold transition-all duration-200 ${
