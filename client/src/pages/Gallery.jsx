@@ -1,74 +1,107 @@
-import React, { useState } from 'react';
-
-// NOTE: For your local Vite project, uncomment these external imports:
-// import { useTranslation } from 'react-i18next';
-// import SectionHeading from '../components/SectionHeading';
-
-// --- Mock definitions to resolve preview compiler errors ---
-const useTranslation = () => ({ t: (key) => key === 'gallery.title' ? 'Gallery' : key });
-const SectionHeading = ({ title }) => <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">{title}</h2>;
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
   const { t } = useTranslation();
-  
-  // 1. UPDATE THIS LIST TO MATCH YOUR REAL FILE NAMES IN THE PUBLIC/GALLERY FOLDER
-  const images = [
-    '/gallery/image1.jpg',
-    '/gallery/image2.jpg',
-    '/gallery/image3.jpg',
-    '/gallery/image4.jpg',
-    '/gallery/image5.jpg',
-    '/gallery/image6.jpg',
-    '/gallery/image7.jpg',
-    '/gallery/image8.jpg',
-    '/gallery/image9.jpg',
-    '/gallery/image10.jpg',
-    '/gallery/image11.jpg',
-    '/gallery/image12.PNG',
-    '/gallery/image13.jpeg',
-    '/gallery/image14.jpeg',
-    '/gallery/image15.jpeg',
-    '/gallery/image16.jpg',
-    '/gallery/image17.jpg',
-    '/gallery/image18.jpg',
-    '/gallery/image19.jpg',
-    '/gallery/image20.jpg',
-    '/gallery/image21.jpg',
-    '/gallery/image22.jpg',
-    '/gallery/image23.jpg',
-    '/gallery/image24.JPG'
-  ];
-  
+  const [activeTab, setActiveTab] = useState("campus");
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const images = {
+    campus: [
+      "/gallery/image1.jpg",
+      "/gallery/image2.jpg",
+      "/gallery/image3.jpg",
+      "/gallery/image4.jpg",
+      "/gallery/image5.jpg",
+      "/gallery/image6.jpg",
+      "/gallery/image7.jpg",
+      "/gallery/image8.jpg",
+      "/gallery/image9.jpg",
+      "/gallery/image10.jpg",
+      "/gallery/image11.jpg",
+      "/gallery/image12.PNG",
+    ],
+    online: [
+      "/gallery/image13.jpeg",
+      "/gallery/image14.jpeg",
+      "/gallery/image15.jpeg",
+      "/gallery/image16.jpg",
+      "/gallery/image17.jpg",
+      "/gallery/image18.jpg",
+      "/gallery/image19.jpg",
+      "/gallery/image20.jpg",
+      "/gallery/image21.jpg",
+      "/gallery/image22.jpg",
+      "/gallery/image23.jpg",
+      "/gallery/image24.JPG",
+    ],
+  };
+
   return (
-    <div className="py-16 container mx-auto px-4 min-h-screen">
-      <SectionHeading title={t('gallery.title')} />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8">
-        {images.map((img, index) => (
-          <div 
-            key={index} 
-            className="aspect-square bg-gray-200 cursor-pointer hover:opacity-90 hover:scale-[1.02] transition-all duration-300 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center overflow-hidden group"
-            onClick={() => setSelectedImage(img)}
+    <div className="py-20 container mx-auto px-6">
+      <h1 className="text-4xl font-bold text-navy mb-12 text-center">
+        {t("gallery.title")}
+      </h1>
+
+      {/* Toggle Buttons */}
+      <div className="flex justify-center gap-4 mb-12">
+        <button
+          onClick={() => setActiveTab("campus")}
+          className={`px-8 py-2 rounded-full font-bold transition-all cursor-pointer ${
+            activeTab === "campus"
+              ? "bg-orange-500 text-white"
+              : "bg-gray-200 text-gray-600"
+          }`}
+        >
+          {t("gallery.campus")}
+        </button>
+        <button
+          onClick={() => setActiveTab("online")}
+          className={`px-8 py-2 rounded-full font-bold transition-all cursor-pointer ${
+            activeTab === "online"
+              ? "bg-orange-500 text-white"
+              : "bg-gray-200 text-gray-600"
+          }`}
+        >
+          {t("gallery.online")}
+        </button>
+      </div>
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {images[activeTab].map((src, index) => (
+          <div
+            key={index}
+            className="h-80 rounded-2xl overflow-hidden shadow-sm cursor-pointer"
+            onClick={() => setSelectedImage(src)}
           >
-             {/* 2. SHOW THE ACTUAL IMAGE HERE */}
-             <img src={img} alt={`Gallery ${index + 1}`} loading="lazy" className="w-full h-full object-cover" />
+            <img
+              src={src}
+              alt="Gallery"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
 
-      {/* Lightbox / Enlarged View */}
+      {/* Lightbox Overlay */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm" onClick={() => setSelectedImage(null)}>
-          <div className="relative max-w-4xl w-full h-3/4 rounded-2xl flex flex-col items-center justify-center overflow-hidden" onClick={e => e.stopPropagation()}>
-            <button className="absolute top-4 right-4 text-white hover:text-red-500 bg-black/50 hover:bg-black/80 rounded-full w-10 h-10 flex items-center justify-center transition-colors focus:outline-none z-10" onClick={() => setSelectedImage(null)}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            
-            {/* 3. SHOW THE ENLARGED IMAGE HERE */}
-            <img src={selectedImage} alt="Enlarged view" className="max-w-full max-h-full object-contain" />
-            
-          </div>
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-8 right-8 text-white text-4xl hover:text-orange-500"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img
+            src={selectedImage}
+            alt="Enlarged view"
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+          />
         </div>
       )}
     </div>

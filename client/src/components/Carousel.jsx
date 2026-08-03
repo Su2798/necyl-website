@@ -38,15 +38,16 @@ const Carousel = ({ slides }) => {
             <img 
               src={slide.image} 
               alt={`Banner ${index + 1}`} 
-              className="w-full h-full object-cover opacity-60"
+              className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black/40" />
             {/* Text Overlay */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
               <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-5 duration-700">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-md">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-50 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow">
+                <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow">
                   {slide.subtitle}
                 </p>
                 {slide.ctaText && (

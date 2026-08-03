@@ -20,8 +20,12 @@ const Footer = () => {
                 to="/"
                 className="text-2xl font-bold text-white-900 flex items-center gap-2"
               >
-                <img src={logo} alt="NECYL Logo" className="h-10 w-auto" />{" "}
-                NECYL
+                <img
+                  src={logo}
+                  alt="NECYL Logo"
+                  className="h-14 w-auto object-contain sm:h-20"
+                />
+                <span className="text-2xl font-bold pt-3 text-white">NECYL</span>
               </Link>
             </div>
             <p className="text-blue-200 text-sm leading-relaxed">
