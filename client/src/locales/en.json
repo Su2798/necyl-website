@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About Us",
     "programmes": "Programmes",
+    "career": "Careers",
     "gallery": "Gallery",
     "faq": "FAQ",
     "contact": "Contact",
@@ -96,7 +97,9 @@
     ]
   },
   "gallery": {
-    "title": "Gallery"
+    "title": "Gallery",
+    "campus": "Campus Life",
+    "online": "Online Learning"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -135,12 +138,188 @@
     }
   },
   "footer": {
-  "description": "Empowering students through excellent English education.",
-  "navigation": "Navigation",
-  "support": "Support",
-  "reachUs": "Reach Us",
-  "copyright": "© 2026 NECYL English School. All rights reserved.",
-  "privacy": "Privacy Policy",
-  "terms": "Terms of Service"
-}
+    "description": "Empowering students through excellent English education.",
+    "navigation": "Navigation",
+    "support": "Support",
+    "reachUs": "Reach Us",
+    "copyright": "© 2026 NECYL English School. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+  ,
+  "career": {
+    "title": "Career Opportunities",
+    "joinTeam": "Join Our Team",
+    "heroTitle": "Build Your Career at NECYL",
+    "heroHighlight": "at NECYL",
+    "intro": "We are always looking for passionate educators and dedicated staff to help shape the future of English education in Myanmar.",
+    "stats": [
+      { "num": "5+", "label": "Open Positions" },
+      { "num": "200+", "label": "Team Members" },
+      { "num": "10+", "label": "Years Strong" }
+    ],
+    "whyTitle": "Why NECYL",
+    "whySubtitle": "What We Offer Our Team",
+    "benefits": [
+      { "title": "Continuous Learning", "desc": "Free access to all NECYL courses and in-house teacher development workshops." },
+      { "title": "Collaborative Team", "desc": "Work alongside a passionate, supportive team of educators and professionals." },
+      { "title": "Work-Life Balance", "desc": "Flexible scheduling options and a respectful, people-first workplace culture." },
+      { "title": "Recognition & Growth", "desc": "Performance bonuses, promotion pathways, and recognition for outstanding contributions." },
+      { "title": "Competitive Pay", "desc": "Salaries aligned with market standards plus annual review and increment." },
+      { "title": "Career Development", "desc": "Mentorship programmes and support for professional certifications like CELTA." }
+    ],
+    "openPositions": "Open Positions",
+    "currentOpportunities": "Current Opportunities",
+    "positionsSubtitle": "Find the role that matches your passion and skills. All positions are based in Yangon.",
+    "filterAll": "All",
+    "deptTeaching": "Teaching",
+    "deptAdmin": "Administration",
+    "deptMarketing": "Marketing",
+    "salary": "Salary",
+    "viewDetails": "View Details",
+    "less": "Less",
+    "responsibilities": "Responsibilities",
+    "requirements": "Requirements",
+    "applyNow": "Apply Now",
+    "apply": "Apply",
+    "howToApplyTitle": "How to Apply",
+    "readyToApply": "Ready to Apply?",
+    "noRole": "Don't see the right role?",
+    "noRoleDesc": "We love meeting talented people even when we don't have a specific opening. Send us a speculative application and we'll keep you in mind for future roles.",
+    "emailHR": "Email HR Team",
+    "contactHours": "Mon\u2013Fri, 9 AM \u2013 5 PM",
+    "howToApplySteps": [
+      { "step": "01", "title": "Choose Your Role", "desc": "Browse our open positions above and click Apply Now on the role that fits you." },
+      { "step": "02", "title": "Send Your Application", "desc": "Email your CV and a short cover letter to hr@necyl.com with the job title in the subject." },
+      { "step": "03", "title": "Interview & Assessment", "desc": "Shortlisted candidates will be invited for an interview and a short teaching demo or task." },
+      { "step": "04", "title": "Welcome to the Team!", "desc": "Successful applicants will receive an offer letter and begin onboarding with our team." }
+    ],
+    "jobs": [
+      {
+        "id": "teacher-primary",
+        "title": "Primary English Teacher",
+        "department": "Teaching",
+        "location": "Yangon",
+        "type": "Full-time",
+        "level": "Mid-level",
+        "salary": "350,000 \u2013 500,000 MMK / month",
+        "summary": "Inspire young minds aged 6-12 through fun, communicative English lessons. You will design engaging activities, track student progress, and work closely with parents.",
+        "tag": "Hot",
+        "responsibilities": [
+          "Plan and deliver interactive English lessons for primary-age learners",
+          "Use communicative and task-based teaching methods",
+          "Assess student progress and provide constructive feedback",
+          "Communicate regularly with parents on student development",
+          "Collaborate with fellow teachers to improve curriculum quality"
+        ],
+        "requirements": [
+          "Bachelor degree in Education, English, or related field",
+          "Minimum 1 year teaching experience (fresh graduates welcome)",
+          "Warm, patient, and creative personality",
+          "Strong spoken and written English skills",
+          "TEFL/CELTA certification is a plus"
+        ]
+      },
+      {
+        "id": "teacher-teen",
+        "title": "Teen & Young Adult English Teacher",
+        "department": "Teaching",
+        "location": "Yangon",
+        "type": "Full-time",
+        "level": "Mid-level",
+        "salary": "380,000 \u2013 550,000 MMK / month",
+        "summary": "Deliver dynamic English courses for teenagers and young adults, focusing on grammar, speaking fluency, and exam preparation.",
+        "tag": "New",
+        "responsibilities": [
+          "Teach General English and exam-prep courses (IELTS, Cambridge)",
+          "Develop engaging lesson plans tailored to teen learning styles",
+          "Motivate and manage diverse classroom dynamics",
+          "Prepare students for internal and external assessments",
+          "Participate in school events and extra-curricular activities"
+        ],
+        "requirements": [
+          "Bachelor degree in English, Linguistics, or Education",
+          "Experience teaching teens or young adults preferred",
+          "Energetic, enthusiastic, and student-centred approach",
+          "Familiarity with Cambridge or IELTS syllabi is an advantage",
+          "TEFL/CELTA certification preferred"
+        ]
+      },
+      {
+        "id": "teacher-adult",
+        "title": "Adult Communicative English Teacher",
+        "department": "Teaching",
+        "location": "Yangon",
+        "type": "Part-time / Full-time",
+        "level": "Senior",
+        "salary": "400,000 \u2013 600,000 MMK / month",
+        "summary": "Facilitate practical, workplace-focused English classes for adult learners. Help professionals gain the language skills they need.",
+        "tag": null,
+        "responsibilities": [
+          "Teach communicative English to adult learners at all levels",
+          "Develop business English and conversation modules",
+          "Use real-world materials to make lessons practical and relevant",
+          "Conduct placement tests and needs assessments",
+          "Provide one-on-one coaching sessions when required"
+        ],
+        "requirements": [
+          "Minimum 2 years of teaching adults",
+          "Strong understanding of business and professional English",
+          "Excellent interpersonal and presentation skills",
+          "Experience with online teaching tools (Zoom, Google Meet)",
+          "MA in TESOL or equivalent is a plus"
+        ]
+      },
+      {
+        "id": "admin-coordinator",
+        "title": "Student Services & Admin Coordinator",
+        "department": "Administration",
+        "location": "Yangon",
+        "type": "Full-time",
+        "level": "Entry-level",
+        "salary": "280,000 \u2013 380,000 MMK / month",
+        "summary": "Be the friendly face of NECYL. Manage enrolments, handle student inquiries, coordinate schedules, and ensure the school runs smoothly.",
+        "tag": "New",
+        "responsibilities": [
+          "Handle student enrolment, registration, and record-keeping",
+          "Respond to inquiries via phone, email, Facebook, and Viber",
+          "Coordinate class schedules and room assignments",
+          "Support marketing events, open days, and school campaigns",
+          "Maintain the school social media presence when needed"
+        ],
+        "requirements": [
+          "Strong communication skills in Myanmar and English",
+          "Organized, detail-oriented, and tech-savvy",
+          "Proficient in Microsoft Office and Google Workspace",
+          "Experience in customer service or education admin is a bonus",
+          "Positive attitude and team-player mindset"
+        ]
+      },
+      {
+        "id": "digital-marketing",
+        "title": "Digital Marketing & Content Creator",
+        "department": "Marketing",
+        "location": "Yangon (Hybrid)",
+        "type": "Part-time",
+        "level": "Mid-level",
+        "salary": "200,000 \u2013 350,000 MMK / month",
+        "summary": "Grow NECYL brand and student community online. Create compelling content, manage social media channels, and run campaigns.",
+        "tag": null,
+        "responsibilities": [
+          "Create and schedule posts for Facebook, Instagram, and TikTok",
+          "Produce short video content, reels, and stories",
+          "Design graphics using Canva or Adobe tools",
+          "Run paid advertising campaigns (Facebook Ads)",
+          "Track analytics and report on campaign performance"
+        ],
+        "requirements": [
+          "Experience managing social media for a brand or school",
+          "Strong creative and storytelling skills",
+          "Proficiency in Canva, CapCut, or Adobe tools",
+          "Understanding of Facebook Ads Manager",
+          "Passion for education and community building"
+        ]
+      }
+    ]
+  }
 }

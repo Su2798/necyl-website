@@ -1,35 +1,49 @@
 @import "tailwindcss";
 
 @theme {
+  --color-primary: #f97316;
+  --color-navy: #172554;
   --color-dark-blue: #1e3a8a;
   --color-light-blue: #e0f2fe;
-  --color-orange-theme: #f97316;
 }
 
 body {
   font-family: "Noto Serif Myanmar", serif;
-  /* Increased line height for global readability */
+  font-weight: 400; /* Thinner weight for Burmese */
   line-height: 1.8;
 }
 
-/* Specifically increase spacing for Headings to prevent vowel collisions */
+/* Scale down Myanmar script — Noto Serif Myanmar renders visually larger than Latin */
+html.lang-my {
+  font-size: 78%;
+}
+
+.font-leadership {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Updated Heading styling to use Navy */
 h1,
 h2,
 h3,
 h4 {
+  /* color: var(--color-navy); */
+  font-weight: 500;
   line-height: 1.4 !important;
   padding-bottom: 0.5rem;
 }
 
-/* Specific fix for text blocks that might still be cramped */
-p,
-li,
-button {
-  line-height: 1.8 !important;
+/* Testimonial Border styling */
+.testimonial-card {
+  border: 2px solid var(--color-primary);
+  border-radius: 1.5rem;
+  padding: 2rem;
 }
 
-/* If the FAQ text specifically is still clipping, this targets it */
-.faq-answer-text {
-  line-height: 2 !important;
-  padding-top: 0.5rem;
+button,
+a,
+.cursor-pointer {
+  cursor: pointer !important;
 }

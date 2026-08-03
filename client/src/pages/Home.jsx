@@ -43,7 +43,8 @@ const Home = () => {
       <Carousel slides={heroSlides} />
 
       {/* Stats Section */}
-      <section className="py-20 container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-20">
+        <div className="container mx-auto px-6 max-w-7xl grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h4 className="text-orange-600 font-bold tracking-widest text-sm mb-4">
             {t("home.whoWeAre.label")}
@@ -63,43 +64,49 @@ const Home = () => {
             { n: "30+", l: t("home.stats.classes") },
             { n: "95%", l: t("home.stats.satisfaction") },
           ].map((stat, i) => (
-            <div key={i} className="bg-blue-50 p-6 rounded-2xl">
-              <h3 className="text-3xl font-bold text-blue-900 mb-1">
+            <div key={i} className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
+              <h3 className="text-3xl font-bold text-gray-900 mb-1">
                 {stat.n}
               </h3>
               <p className="text-sm font-medium text-gray-600">{stat.l}</p>
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* Founder Section */}
-      <section className="bg-blue-900 py-20 text-white">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-gray-900 py-20 text-white relative overflow-hidden">
+        {/* Subtle warm accent */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-400 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-6 max-w-7xl grid md:grid-cols-2 gap-12 items-center relative">
           <div>
             <p className="text-orange-400 font-bold tracking-widest text-sm mb-6 uppercase">
               {t("home.founder.title")}
             </p>
-            <h2 className="text-4xl font-serif mb-8 italic">
+            <h2 className="text-4xl font-serif mb-8 italic text-white">
               "{t("home.founder.quote")}"
             </h2>
-            <p className="text-blue-100 mb-8 leading-relaxed">
+            <p className="text-gray-300 mb-8 leading-relaxed">
               {t("home.founder.message")}
             </p>
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gray-300 overflow-hidden">
+              <div className="w-16 h-16 rounded-full bg-gray-700 overflow-hidden">
                 <img src={logo} alt="Founder" />
               </div>
               <div>
-                <h4 className="font-bold">{t("home.founder.name")}</h4>
-                <p className="text-blue-300 text-sm">
+                <h4 className="font-bold text-white">{t("home.founder.name")}</h4>
+                <p className="text-orange-400 text-sm">
                   {t("home.founder.role")}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="h-96 rounded-3xl overflow-hidden shadow-lg">
+          <div className="h-96 rounded-3xl overflow-hidden shadow-2xl">
             <img
               src="/gallery/image19.jpg"
               alt="Founder of NECYL"
@@ -110,8 +117,8 @@ const Home = () => {
       </section>
 
       {/* Programmes Section */}
-      <section className="py-24 bg-white px-4">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-7xl">
           <SectionHeading title={t("home.programmesTitle")} />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {programmesList.map((prog, index) => (
@@ -120,7 +127,7 @@ const Home = () => {
                 className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
               >
                 {/* Blue Header Area */}
-                <div className="h-48 bg-blue-100 flex items-center justify-center text-blue-300">
+                <div className="h-48 bg-amber-50 flex items-center justify-center text-orange-300">
                   <svg
                     className="w-16 h-16"
                     fill="currentColor"
@@ -180,7 +187,7 @@ const Home = () => {
 
       {/* Life at NECYL Gallery Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 max-w-7xl">
           {/* Title and Button Row */}
           <div className="flex justify-between items-end mb-12">
             <h2 className="text-4xl font-serif text-blue-900">
@@ -225,16 +232,16 @@ const Home = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 bg-gray-50 px-4">
-        <div className="container mx-auto text-center max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-20 text-blue-950 italic">
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-7xl text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-20 text-gray-900 italic">
             {t("home.testimonialsTitle")}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((tst, i) => (
               <div
                 key={i}
-                className="p-10 border border-gray-100 rounded-3xl bg-white hover:shadow-lg transition-shadow duration-300"
+                className="testimonial-card bg-white hover:shadow-xl transition-shadow duration-300"
               >
                 <p className="text-2xl text-gray-800 mb-8 leading-relaxed font-medium">
                   "{tst.text}"
@@ -250,7 +257,7 @@ const Home = () => {
 
       {/* Partners Section */}
       <section className="py-16 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-6 max-w-7xl text-center">
           <h2 className="text-sm font-bold text-gray-500 uppercase tracking-[0.2em] mb-10">
             {t("home.partnersTitle")}
           </h2>
