@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -8,14 +9,14 @@
 }
 
 body {
-  font-family: "Noto Serif Myanmar", serif;
-  font-weight: 400; /* Thinner weight for Burmese */
+   font-family: "Padauk", "Noto Sans Myanmar", sans-serif;
+  font-weight: 600;
   line-height: 1.8;
 }
 
 /* Scale down Myanmar script — Noto Serif Myanmar renders visually larger than Latin */
 html.lang-my {
-  font-size: 78%;
+  font-size: 88%;
 }
 
 .font-leadership {
