@@ -16,7 +16,8 @@ body {
 
 /* Scale down Myanmar script — Noto Serif Myanmar renders visually larger than Latin */
 html.lang-my {
-  font-size: 88%;
+  font-size: 98%;
+  letter-spacing: 0.01em;
 }
 
 .font-leadership {
